@@ -23,7 +23,7 @@ namespace oplan
         private void btnPrijava_Click(object sender, EventArgs e)
         {
             korisnicko_ime = txtKorime.Text;
-            lozinka = txtKorime.Text;
+            lozinka = txtLozinka.Text;
 
             if ( string.IsNullOrEmpty(korisnicko_ime) || string.IsNullOrEmpty(lozinka) )
             {
@@ -33,6 +33,7 @@ namespace oplan
             {
                 if ( ProvjeraUnosa.ProvjeriTekst(korisnicko_ime) || ProvjeraUnosa.ProvjeriTekst(lozinka) )
                 {
+                    this.Hide();
                     ProvjeraKorisnika.ProvjeriKorisnika(korisnicko_ime, lozinka);
                     this.Close();
                 }

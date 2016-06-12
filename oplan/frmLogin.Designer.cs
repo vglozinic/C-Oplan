@@ -107,6 +107,7 @@
             this.Controls.Add(this.txtKorime);
             this.Controls.Add(this.pbxLogo);
             this.Name = "frmLogin";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "OPLAN Prijava";
             ((System.ComponentModel.ISupportInitialize)(this.pbxLogo)).EndInit();
             this.ResumeLayout(false);
