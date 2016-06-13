@@ -10,12 +10,12 @@ using System.Windows.Forms;
 
 namespace oplan
 {
-    public partial class frmLogin : Form
+    public partial class frmPrijava : Form
     {
         private string korisnicko_ime;
         private string lozinka;
 
-        public frmLogin()
+        public frmPrijava()
         {
             InitializeComponent();
         }

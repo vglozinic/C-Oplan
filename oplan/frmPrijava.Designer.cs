@@ -1,6 +1,6 @@
 ﻿namespace oplan
 {
-    partial class frmLogin
+    partial class frmPrijava
     {
         /// <summary>
         /// Required designer variable.
