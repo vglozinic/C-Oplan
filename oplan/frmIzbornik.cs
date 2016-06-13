@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace oplan
 {
-    public partial class frmPlanovi : Form
+    public partial class frmIzbornik : Form
     {
-        public frmPlanovi()
+        public frmIzbornik()
         {
             InitializeComponent();
-        }
-
-        private void btnIzmjeniPlan_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

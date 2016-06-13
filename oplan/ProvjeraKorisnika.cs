@@ -11,16 +11,7 @@ namespace oplan
     {
         static public void ProvjeriKorisnika(string korisnickoIme, string lozinka)
         {
-            if (lozinka == "admin")
-            {
-                frmAdminIzbor formaAdmin = new frmAdminIzbor();
-                formaAdmin.ShowDialog();
-            }
-            else
-            {
-                frmKorisnikIzbor formaKorisnik = new frmKorisnikIzbor();
-                formaKorisnik.ShowDialog();
-            }
+            
         }
     }
 }

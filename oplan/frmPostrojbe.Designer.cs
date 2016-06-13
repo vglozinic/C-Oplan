@@ -30,8 +30,8 @@
         {
             this.dgvDivizije = new System.Windows.Forms.DataGridView();
             this.btnIzbrisiPostrojbu = new System.Windows.Forms.Button();
-            this.btnDodajDiviziju = new System.Windows.Forms.Button();
-            this.btnIzmijeniDiviziju = new System.Windows.Forms.Button();
+            this.btnDodajPostrojbu = new System.Windows.Forms.Button();
+            this.btnIzmijeniPostrojbu = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDivizije)).BeginInit();
             this.SuspendLayout();
             // 
@@ -50,41 +50,41 @@
             this.btnIzbrisiPostrojbu.Name = "btnIzbrisiPostrojbu";
             this.btnIzbrisiPostrojbu.Size = new System.Drawing.Size(125, 32);
             this.btnIzbrisiPostrojbu.TabIndex = 2;
-            this.btnIzbrisiPostrojbu.Text = "Izbriši diviziju";
+            this.btnIzbrisiPostrojbu.Text = "Izbriši postrojbu";
             this.btnIzbrisiPostrojbu.UseVisualStyleBackColor = true;
             // 
-            // btnDodajDiviziju
+            // btnDodajPostrojbu
             // 
-            this.btnDodajDiviziju.Font = new System.Drawing.Font("Calibri", 10F);
-            this.btnDodajDiviziju.Location = new System.Drawing.Point(226, 391);
-            this.btnDodajDiviziju.Name = "btnDodajDiviziju";
-            this.btnDodajDiviziju.Size = new System.Drawing.Size(125, 32);
-            this.btnDodajDiviziju.TabIndex = 3;
-            this.btnDodajDiviziju.Text = "Dodaj diviziju";
-            this.btnDodajDiviziju.UseVisualStyleBackColor = true;
+            this.btnDodajPostrojbu.Font = new System.Drawing.Font("Calibri", 10F);
+            this.btnDodajPostrojbu.Location = new System.Drawing.Point(226, 391);
+            this.btnDodajPostrojbu.Name = "btnDodajPostrojbu";
+            this.btnDodajPostrojbu.Size = new System.Drawing.Size(125, 32);
+            this.btnDodajPostrojbu.TabIndex = 3;
+            this.btnDodajPostrojbu.Text = "Dodaj postrojbu";
+            this.btnDodajPostrojbu.UseVisualStyleBackColor = true;
             // 
-            // btnIzmijeniDiviziju
+            // btnIzmijeniPostrojbu
             // 
-            this.btnIzmijeniDiviziju.Font = new System.Drawing.Font("Calibri", 10F);
-            this.btnIzmijeniDiviziju.Location = new System.Drawing.Point(357, 391);
-            this.btnIzmijeniDiviziju.Name = "btnIzmijeniDiviziju";
-            this.btnIzmijeniDiviziju.Size = new System.Drawing.Size(125, 32);
-            this.btnIzmijeniDiviziju.TabIndex = 4;
-            this.btnIzmijeniDiviziju.Text = "Izmijeni diviziju";
-            this.btnIzmijeniDiviziju.UseVisualStyleBackColor = true;
+            this.btnIzmijeniPostrojbu.Font = new System.Drawing.Font("Calibri", 10F);
+            this.btnIzmijeniPostrojbu.Location = new System.Drawing.Point(357, 391);
+            this.btnIzmijeniPostrojbu.Name = "btnIzmijeniPostrojbu";
+            this.btnIzmijeniPostrojbu.Size = new System.Drawing.Size(125, 32);
+            this.btnIzmijeniPostrojbu.TabIndex = 4;
+            this.btnIzmijeniPostrojbu.Text = "Izmijeni postrojbu";
+            this.btnIzmijeniPostrojbu.UseVisualStyleBackColor = true;
             // 
             // frmPostrojbe
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(624, 442);
-            this.Controls.Add(this.btnIzmijeniDiviziju);
-            this.Controls.Add(this.btnDodajDiviziju);
+            this.Controls.Add(this.btnIzmijeniPostrojbu);
+            this.Controls.Add(this.btnDodajPostrojbu);
             this.Controls.Add(this.btnIzbrisiPostrojbu);
             this.Controls.Add(this.dgvDivizije);
             this.Name = "frmPostrojbe";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Rad s divizijama";
+            this.Text = "Rad s postrojbama";
             ((System.ComponentModel.ISupportInitialize)(this.dgvDivizije)).EndInit();
             this.ResumeLayout(false);
 
@@ -94,7 +94,7 @@
 
         private System.Windows.Forms.DataGridView dgvDivizije;
         private System.Windows.Forms.Button btnIzbrisiPostrojbu;
-        private System.Windows.Forms.Button btnDodajDiviziju;
-        private System.Windows.Forms.Button btnIzmijeniDiviziju;
+        private System.Windows.Forms.Button btnDodajPostrojbu;
+        private System.Windows.Forms.Button btnIzmijeniPostrojbu;
     }
 }
