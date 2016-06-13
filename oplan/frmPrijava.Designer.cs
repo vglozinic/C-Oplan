@@ -54,6 +54,7 @@
             this.txtKorime.Name = "txtKorime";
             this.txtKorime.Size = new System.Drawing.Size(218, 26);
             this.txtKorime.TabIndex = 1;
+            this.txtKorime.TextChanged += new System.EventHandler(this.txtKorime_TextChanged);
             // 
             // txtLozinka
             // 
@@ -63,6 +64,7 @@
             this.txtLozinka.Size = new System.Drawing.Size(218, 26);
             this.txtLozinka.TabIndex = 2;
             this.txtLozinka.UseSystemPasswordChar = true;
+            this.txtLozinka.TextChanged += new System.EventHandler(this.txtLozinka_TextChanged);
             // 
             // lblKorime
             // 
@@ -95,7 +97,7 @@
             this.btnPrijava.UseVisualStyleBackColor = true;
             this.btnPrijava.Click += new System.EventHandler(this.btnPrijava_Click);
             // 
-            // frmLogin
+            // frmPrijava
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -106,9 +108,10 @@
             this.Controls.Add(this.txtLozinka);
             this.Controls.Add(this.txtKorime);
             this.Controls.Add(this.pbxLogo);
-            this.Name = "frmLogin";
+            this.Name = "frmPrijava";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "OPLAN Prijava";
+            this.Load += new System.EventHandler(this.frmPrijava_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pbxLogo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

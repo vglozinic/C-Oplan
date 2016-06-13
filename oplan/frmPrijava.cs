@@ -12,35 +12,50 @@ namespace oplan
 {
     public partial class frmPrijava : Form
     {
-        private string korisnicko_ime;
-        private string lozinka;
 
         public frmPrijava()
         {
             InitializeComponent();
         }
 
+        private void frmPrijava_Load(object sender, EventArgs e)
+        {
+            btnPrijava.Enabled = false;
+        }
+
         private void btnPrijava_Click(object sender, EventArgs e)
         {
-            korisnicko_ime = txtKorime.Text;
-            lozinka = txtLozinka.Text;
-
-            if ( string.IsNullOrEmpty(korisnicko_ime) || string.IsNullOrEmpty(lozinka) )
+            if ( ProvjeraUnosa.ProvjeriTekst(txtKorime.Text) || ProvjeraUnosa.ProvjeriTekst(txtLozinka.Text) )
             {
-                MessageBox.Show("Nisu unesena potrebna polja!");
+                this.Hide();
+                ProvjeraKorisnika.ProvjeriKorisnika(txtKorime.Text, txtLozinka.Text);
+                this.Close();
             }
             else
             {
-                if ( ProvjeraUnosa.ProvjeriTekst(korisnicko_ime) || ProvjeraUnosa.ProvjeriTekst(lozinka) )
-                {
-                    this.Hide();
-                    ProvjeraKorisnika.ProvjeriKorisnika(korisnicko_ime, lozinka);
-                    this.Close();
-                }
-                else
-                {
-                    MessageBox.Show("Unesena polja nisu u dobrom obliku");
-                }
+                MessageBox.Show("Unesena polja nisu u dobrom obliku");
+            }
+        }
+
+        private void txtKorime_TextChanged(object sender, EventArgs e)
+        {
+            ProvjeraPraznogUnosa();
+        }
+
+        private void txtLozinka_TextChanged(object sender, EventArgs e)
+        {
+            ProvjeraPraznogUnosa();
+        }
+
+        private void ProvjeraPraznogUnosa()
+        {
+            if (string.IsNullOrEmpty(txtKorime.Text) || string.IsNullOrEmpty(txtLozinka.Text))
+            {
+                btnPrijava.Enabled = false;
+            }
+            else
+            {
+                btnPrijava.Enabled = true;
             }
         }
     }
