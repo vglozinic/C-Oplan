@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPostrojbe));
             this.dgvDivizije = new System.Windows.Forms.DataGridView();
             this.btnIzbrisiPostrojbu = new System.Windows.Forms.Button();
             this.btnDodajPostrojbu = new System.Windows.Forms.Button();
@@ -82,6 +83,7 @@
             this.Controls.Add(this.btnDodajPostrojbu);
             this.Controls.Add(this.btnIzbrisiPostrojbu);
             this.Controls.Add(this.dgvDivizije);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmPostrojbe";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Rad s postrojbama";

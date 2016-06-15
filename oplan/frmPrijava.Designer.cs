@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPrijava));
             this.pbxLogo = new System.Windows.Forms.PictureBox();
             this.txtKorime = new System.Windows.Forms.TextBox();
             this.txtLozinka = new System.Windows.Forms.TextBox();
@@ -108,6 +109,7 @@
             this.Controls.Add(this.txtLozinka);
             this.Controls.Add(this.txtKorime);
             this.Controls.Add(this.pbxLogo);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmPrijava";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "OPLAN Prijava";
