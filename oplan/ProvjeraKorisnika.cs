@@ -15,10 +15,9 @@ namespace oplan
         ///Provjerava jesu li korisničko ime i lozinka jednaki onima u bazi za nađenog korisnika. 
         ///Ako je nađen gleda je li korisnik administrator ili obični korisnik te otvara formu glavnog izbornika.
         ///</summary>
-        ///<returns>Ne vraća ništa jer je tipa void.</returns>
         static public void ProvjeriKorisnika(frmPrijava prijava, string korisnickoIme, string lozinka)
         {
-            if (!ProvjeriKorisnickoIme(korisnickoIme, lozinka))
+            if (!ProvjeriKorisnickoIme(korisnickoIme))
             {
                 MessageBox.Show("Uneseno korisničko ime ne postoji!", "Pogreška", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
@@ -47,7 +46,7 @@ namespace oplan
         ///Provjerava postoji li korisničko ime na temelju upita prema bazi.
         ///</summary>
         ///<returns>True ako korisničko ime postoji, false ako ne postoji.</returns>
-        static public bool ProvjeriKorisnickoIme(string korisnickoIme, string lozinka)
+        static public bool ProvjeriKorisnickoIme(string korisnickoIme)
         {
             using (var db = new EntitiesSettings())
             {

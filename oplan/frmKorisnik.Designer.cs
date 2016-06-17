@@ -141,6 +141,7 @@
             this.btnSpremi.TabIndex = 7;
             this.btnSpremi.Text = "Spremi";
             this.btnSpremi.UseVisualStyleBackColor = true;
+            this.btnSpremi.Click += new System.EventHandler(this.btnSpremi_Click);
             // 
             // btnOdustani
             // 
@@ -151,6 +152,7 @@
             this.btnOdustani.TabIndex = 8;
             this.btnOdustani.Text = "Odustani";
             this.btnOdustani.UseVisualStyleBackColor = true;
+            this.btnOdustani.Click += new System.EventHandler(this.btnOdustani_Click);
             // 
             // frmKorisnik
             // 
@@ -166,10 +168,13 @@
             this.Controls.Add(this.lblLozinka);
             this.Controls.Add(this.txtKorime);
             this.Controls.Add(this.lblKorime);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "frmKorisnik";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Dodavanje / Izmjena korisnika";
+            this.Load += new System.EventHandler(this.frmKorisnik_Load);
             this.gbxAdmin.ResumeLayout(false);
             this.gbxAdmin.PerformLayout();
             this.ResumeLayout(false);

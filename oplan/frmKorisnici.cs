@@ -16,5 +16,30 @@ namespace oplan
         {
             InitializeComponent();
         }
+
+        private void frmKorisnici_Load(object sender, EventArgs e)
+        {
+            RadSKorisnicima.PrikaziKorisnike(korisnikBindingSource);
+        }
+
+        private void btnDodajKorisnika_Click(object sender, EventArgs e)
+        {
+            RadSKorisnicima.DodajKorisnika(korisnikBindingSource);
+        }
+
+        private void btnIzmijeniKorisnika_Click(object sender, EventArgs e)
+        {
+            RadSKorisnicima.IzmijeniKorisnika(korisnikBindingSource);
+        }
+
+        private void btnIzbrisiKorisnika_Click(object sender, EventArgs e)
+        {
+            RadSKorisnicima.IzbrisiKorisnika(korisnikBindingSource);
+        }
+
+        private void btnIzvjestaj_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

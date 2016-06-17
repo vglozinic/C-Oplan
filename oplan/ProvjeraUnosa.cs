@@ -25,5 +25,19 @@ namespace oplan
                 return false;
             }
         }
+
+        static public string ProvjeriOblik (string Korime, string Lozinka)
+        {
+            string poruka = null;
+            if (!ProvjeriTekst(Korime))
+            {
+                poruka += "Korisničko ime može sadržavati samo velika i mala slova te brojeve!\n";
+            }
+            if (!ProvjeriTekst(Lozinka))
+            {
+                poruka += "Lozinka može sadržavati samo velika i mala slova te brojeve!\n";
+            }
+            return poruka;
+        }
     }
 }
