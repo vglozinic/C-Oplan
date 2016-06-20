@@ -60,8 +60,8 @@ namespace oplan
                             {
                                 korisnik korisnik = new korisnik
                                 {
-                                    korisnicko_ime = txtKorime.Text,
-                                    lozinka = txtLozinka.Text,
+                                    korisnicko_ime = txtKorime.Text.Substring(0,20),
+                                    lozinka = txtLozinka.Text.Substring(0,15),
                                     administrator = administrator
                                 };
                                 db.korisnik.Add(korisnik);
