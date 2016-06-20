@@ -54,25 +54,12 @@ namespace oplan
             {
                 poruka += "Korisničko ime može sadržavati samo velika i mala slova te brojeve!\n";
             }
-            else
-            {
-                if (Korime.Length > 20)
-                {
-                    poruka += "Korisničko ime može sadržavati maksimalno 20 znakova!\n";
-                }
-            }
 
             if (!ProvjeriTekst(Lozinka))
             {
                 poruka += "Lozinka može sadržavati samo velika i mala slova te brojeve!\n";
             }
-            else
-            {
-                if (Lozinka.Length > 15)
-                {
-                    poruka += "Lozinka ime može sadržavati maksimalno 15 znakova!\n";
-                }
-            }
+            
             return poruka;
         }
     }

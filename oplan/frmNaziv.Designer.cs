@@ -47,6 +47,7 @@
             // 
             this.txtNaziv.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.txtNaziv.Location = new System.Drawing.Point(12, 12);
+            this.txtNaziv.MaxLength = 50;
             this.txtNaziv.Name = "txtNaziv";
             this.txtNaziv.Size = new System.Drawing.Size(210, 26);
             this.txtNaziv.TabIndex = 1;
