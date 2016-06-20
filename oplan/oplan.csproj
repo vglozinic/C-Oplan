@@ -1,0 +1,295 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C382D2A8-EED9-492F-A154-B423C6C1F4A3}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>oplan</RootNamespace>
+    <AssemblyName>oplan</AssemblyName>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>ikona.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BazaPodatakaOPLAN.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BazaPodatakaOPLAN.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BazaPodatakaOPLAN.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BazaPodatakaOPLAN.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BazaPodatakaOPLAN.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BazaPodatakaOPLAN.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="dsIzvjestaj.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsIzvjestaj.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="frmDnevnik.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDnevnik.Designer.cs">
+      <DependentUpon>frmDnevnik.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmIzbornik.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmIzbornik.Designer.cs">
+      <DependentUpon>frmIzbornik.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmKorisnici.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmKorisnici.Designer.cs">
+      <DependentUpon>frmKorisnici.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmKorisnik.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmKorisnik.Designer.cs">
+      <DependentUpon>frmKorisnik.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmNaziv.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmNaziv.Designer.cs">
+      <DependentUpon>frmNaziv.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPostrojba.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPostrojba.Designer.cs">
+      <DependentUpon>frmPostrojba.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPostrojbe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPostrojbe.Designer.cs">
+      <DependentUpon>frmPostrojbe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPrijava.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPrijava.Designer.cs">
+      <DependentUpon>frmPrijava.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPlan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPlan.Designer.cs">
+      <DependentUpon>frmPlan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmUcitaj.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUcitaj.Designer.cs">
+      <DependentUpon>frmUcitaj.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Izvjestaji.cs" />
+    <Compile Include="korisnik.cs">
+      <DependentUpon>BazaPodatakaOPLAN.tt</DependentUpon>
+    </Compile>
+    <Compile Include="plan.cs">
+      <DependentUpon>BazaPodatakaOPLAN.tt</DependentUpon>
+    </Compile>
+    <Compile Include="postrojba.cs">
+      <DependentUpon>BazaPodatakaOPLAN.tt</DependentUpon>
+    </Compile>
+    <Compile Include="pripadnost.cs">
+      <DependentUpon>BazaPodatakaOPLAN.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="promjena.cs">
+      <DependentUpon>BazaPodatakaOPLAN.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ProvjeraKorisnika.cs" />
+    <Compile Include="ProvjeraUnosa.cs" />
+    <Compile Include="RadSKorisnicima.cs" />
+    <Compile Include="RadSPlanovima.cs" />
+    <Compile Include="RadSPostrojbama.cs" />
+    <Compile Include="ruta.cs">
+      <DependentUpon>BazaPodatakaOPLAN.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sysdiagrams.cs">
+      <DependentUpon>BazaPodatakaOPLAN.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tip.cs">
+      <DependentUpon>BazaPodatakaOPLAN.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tocka.cs">
+      <DependentUpon>BazaPodatakaOPLAN.tt</DependentUpon>
+    </Compile>
+    <Compile Include="vrsta.cs">
+      <DependentUpon>BazaPodatakaOPLAN.tt</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="frmDnevnik.resx">
+      <DependentUpon>frmDnevnik.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmIzbornik.resx">
+      <DependentUpon>frmIzbornik.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmKorisnici.resx">
+      <DependentUpon>frmKorisnici.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmKorisnik.resx">
+      <DependentUpon>frmKorisnik.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmNaziv.resx">
+      <DependentUpon>frmNaziv.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPostrojba.resx">
+      <DependentUpon>frmPostrojba.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPostrojbe.resx">
+      <DependentUpon>frmPostrojbe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPrijava.resx">
+      <DependentUpon>frmPrijava.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPlan.resx">
+      <DependentUpon>frmPlan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUcitaj.resx">
+      <DependentUpon>frmUcitaj.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="rptDnevnik.rdlc" />
+    <EntityDeploy Include="BazaPodatakaOPLAN.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>BazaPodatakaOPLAN.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="BazaPodatakaOPLAN.edmx.diagram">
+      <DependentUpon>BazaPodatakaOPLAN.edmx</DependentUpon>
+    </None>
+    <None Include="dsIzvjestaj.xsc">
+      <DependentUpon>dsIzvjestaj.xsd</DependentUpon>
+    </None>
+    <None Include="dsIzvjestaj.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsIzvjestaj.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="dsIzvjestaj.xss">
+      <DependentUpon>dsIzvjestaj.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\korisnik.datasource" />
+    <None Include="Properties\DataSources\plan.datasource" />
+    <None Include="Properties\DataSources\postrojba.datasource" />
+    <None Include="Properties\DataSources\tip.datasource" />
+    <None Include="Properties\DataSources\vrsta.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\ikona.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="BazaPodatakaOPLAN.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>BazaPodatakaOPLAN.edmx</DependentUpon>
+      <LastGenOutput>BazaPodatakaOPLAN.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="BazaPodatakaOPLAN.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>BazaPodatakaOPLAN.edmx</DependentUpon>
+      <LastGenOutput>BazaPodatakaOPLAN.cs</LastGenOutput>
+    </Content>
+    <Content Include="ikona.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
