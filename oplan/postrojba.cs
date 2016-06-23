@@ -22,7 +22,7 @@ public partial class postrojba
     public postrojba()
     {
 
-        this.ruta = new HashSet<ruta>();
+        this.tocka = new HashSet<tocka>();
 
     }
 
@@ -41,11 +41,11 @@ public partial class postrojba
 
     public virtual vrsta vrsta { get; set; }
 
+    public virtual tip tip { get; set; }
+
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
 
-    public virtual ICollection<ruta> ruta { get; set; }
-
-    public virtual tip tip { get; set; }
+    public virtual ICollection<tocka> tocka { get; set; }
 
 }
 

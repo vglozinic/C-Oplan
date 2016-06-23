@@ -7,12 +7,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Prototip_OPPlan;
 
 namespace oplan
 {
     public partial class frmNaziv : Form
     {
         private string nazivPlana;
+        private int prijavljeniKorisnik;
+        private List<podaci> markeri;
+        private List<rute> rute;
 
         public frmNaziv()
         {
@@ -25,6 +29,14 @@ namespace oplan
             nazivPlana = naziv;
             txtNaziv.Text = nazivPlana;
             this.Text = "Izmjena naziva";
+        }
+
+        public frmNaziv(int korisnik, List<podaci> markeri_argument, List<rute> rute_argument)
+        {
+            InitializeComponent();
+            prijavljeniKorisnik = korisnik;
+            markeri = markeri_argument;
+            rute = rute_argument;
         }
 
         private void frmNaziv_Load(object sender, EventArgs e)
@@ -43,7 +55,7 @@ namespace oplan
                 {
                     if (!RadSPlanovima.ProvjeriPlan(txtNaziv.Text))
                     {
-                        //spremi ili kaj god
+                        RadSPlanovima.SpremiPlan(2, nazivPlana, markeri, rute);
                         MessageBox.Show("Uspješno ste spremili plan.", "Uspjeh", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         this.Close();
                     }
@@ -60,7 +72,7 @@ namespace oplan
                     }
                     else
                     {
-                        RadSPlanovima.PromjeniNaziv(nazivPlana, txtNaziv.Text);
+                        RadSPlanovima.PromijeniNaziv(nazivPlana, txtNaziv.Text);
                         MessageBox.Show("Uspješno ste izmijenili naziv.", "Uspjeh", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         this.Close();
                     }

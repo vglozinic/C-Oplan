@@ -40,17 +40,15 @@ public partial class EntitiesSettings : DbContext
 
     public virtual DbSet<pripadnost> pripadnost { get; set; }
 
-    public virtual DbSet<ruta> ruta { get; set; }
-
     public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
-
-    public virtual DbSet<tocka> tocka { get; set; }
 
     public virtual DbSet<vrsta> vrsta { get; set; }
 
     public virtual DbSet<promjena> promjena { get; set; }
 
     public virtual DbSet<tip> tip { get; set; }
+
+    public virtual DbSet<tocka> tocka { get; set; }
 
 }
 

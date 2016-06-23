@@ -33,6 +33,7 @@
             this.miIzbornik = new System.Windows.Forms.ToolStripMenuItem();
             this.miIzbornikNoviPlan = new System.Windows.Forms.ToolStripMenuItem();
             this.miIzbornikUcitajPlan = new System.Windows.Forms.ToolStripMenuItem();
+            this.spremiPlanToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tslCrta = new System.Windows.Forms.ToolStripSeparator();
             this.miIzbornikIzlaz = new System.Windows.Forms.ToolStripMenuItem();
             this.miAdministracija = new System.Windows.Forms.ToolStripMenuItem();
@@ -61,6 +62,7 @@
             this.miIzbornik.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.miIzbornikNoviPlan,
             this.miIzbornikUcitajPlan,
+            this.spremiPlanToolStripMenuItem,
             this.tslCrta,
             this.miIzbornikIzlaz});
             this.miIzbornik.Name = "miIzbornik";
@@ -71,7 +73,7 @@
             // 
             this.miIzbornikNoviPlan.Name = "miIzbornikNoviPlan";
             this.miIzbornikNoviPlan.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.N)));
-            this.miIzbornikNoviPlan.Size = new System.Drawing.Size(170, 22);
+            this.miIzbornikNoviPlan.Size = new System.Drawing.Size(177, 22);
             this.miIzbornikNoviPlan.Text = "Novi plan";
             this.miIzbornikNoviPlan.Click += new System.EventHandler(this.miIzbornikNoviPlan_Click);
             // 
@@ -79,20 +81,28 @@
             // 
             this.miIzbornikUcitajPlan.Name = "miIzbornikUcitajPlan";
             this.miIzbornikUcitajPlan.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.L)));
-            this.miIzbornikUcitajPlan.Size = new System.Drawing.Size(170, 22);
+            this.miIzbornikUcitajPlan.Size = new System.Drawing.Size(177, 22);
             this.miIzbornikUcitajPlan.Text = "Učitaj plan";
             this.miIzbornikUcitajPlan.Click += new System.EventHandler(this.miIzbornikUcitajPlan_Click);
+            // 
+            // spremiPlanToolStripMenuItem
+            // 
+            this.spremiPlanToolStripMenuItem.Name = "spremiPlanToolStripMenuItem";
+            this.spremiPlanToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S)));
+            this.spremiPlanToolStripMenuItem.Size = new System.Drawing.Size(177, 22);
+            this.spremiPlanToolStripMenuItem.Text = "Spremi plan";
+            this.spremiPlanToolStripMenuItem.Click += new System.EventHandler(this.spremiPlanToolStripMenuItem_Click);
             // 
             // tslCrta
             // 
             this.tslCrta.Name = "tslCrta";
-            this.tslCrta.Size = new System.Drawing.Size(167, 6);
+            this.tslCrta.Size = new System.Drawing.Size(174, 6);
             // 
             // miIzbornikIzlaz
             // 
             this.miIzbornikIzlaz.Name = "miIzbornikIzlaz";
             this.miIzbornikIzlaz.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.X)));
-            this.miIzbornikIzlaz.Size = new System.Drawing.Size(170, 22);
+            this.miIzbornikIzlaz.Size = new System.Drawing.Size(177, 22);
             this.miIzbornikIzlaz.Text = "Izlaz";
             this.miIzbornikIzlaz.Click += new System.EventHandler(this.miIzbornikIzlaz_Click);
             // 
@@ -181,5 +191,6 @@
         private System.Windows.Forms.ToolStripMenuItem miPomocOPLAN;
         private System.Windows.Forms.ToolStripSeparator tslCrta;
         private System.Windows.Forms.ToolStripMenuItem miIzbornikIzlaz;
+        private System.Windows.Forms.ToolStripMenuItem spremiPlanToolStripMenuItem;
     }
 }

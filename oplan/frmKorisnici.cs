@@ -48,8 +48,7 @@ namespace oplan
             else
             {
                 MessageBox.Show("Ovaj korisnik nema unosa u dnevniku rada.", "Izvještaj", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            
+            }      
         }
     }
 }

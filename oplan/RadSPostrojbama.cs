@@ -65,7 +65,7 @@ namespace oplan
                         {
                             if (postrojba.id_postrojba == (int)currentRow.Cells[0].Value)
                             {
-                                if (postrojba.ruta.Count == 0)
+                                if (postrojba.tocka.Count == 0)
                                 {
                                     db.postrojba.Remove(postrojba);
                                     db.SaveChanges();
