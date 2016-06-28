@@ -22,7 +22,7 @@ namespace oplan
             {
                 var upit = from p in db.postrojba
                            join v in db.vrsta on p.id_vrsta equals v.id_vrsta
-                           join t in db.tip on p.id_tip equals t.id_tip
+                           join t in db.tip_postrojbe on p.id_tip equals t.id_tip
                            select new
                            {
                                ID = p.id_postrojba,
@@ -44,7 +44,7 @@ namespace oplan
         /// </summary>
         static public void DodajPostrojbu(DataGridView dgvPostrojbe)
         {
-            frmPostrojba formaPostrojba = new frmPostrojba();
+            frmDodajPostrojbu formaPostrojba = new frmDodajPostrojbu();
             formaPostrojba.ShowDialog();
             PrikaziPostrojbe(dgvPostrojbe);
         }
@@ -101,7 +101,7 @@ namespace oplan
                     var itemVrsta = (from v in db.vrsta
                                      where v.id_vrsta == idVrsta
                                      select v.naziv).FirstOrDefault();
-                    var itemTip = (from t in db.tip
+                    var itemTip = (from t in db.tip_postrojbe
                                    where t.id_tip == idTip
                                    select t.naziv).FirstOrDefault();
                     if (itemVrsta == redakZaIzmjenu.Cells[1].Value.ToString() && itemTip == redakZaIzmjenu.Cells[2].Value.ToString())
@@ -146,7 +146,7 @@ namespace oplan
         {
             if (currentRow != null)
             {
-                frmPostrojba formaPostrojba = new frmPostrojba(currentRow);
+                frmDodajPostrojbu formaPostrojba = new frmDodajPostrojbu(currentRow);
                 formaPostrojba.ShowDialog();
                 PrikaziPostrojbe(dgvPostrojbe);
             }

@@ -28,7 +28,7 @@ namespace oplan
         /// </summary>
         static public void DodajKorisnika(BindingSource korisnikBindingSource)
         {
-            frmKorisnik formaKorisnik = new frmKorisnik();
+            frmDodajKorisnika formaKorisnik = new frmDodajKorisnika();
             formaKorisnik.ShowDialog();
             PrikaziKorisnike(korisnikBindingSource);
         }
@@ -77,7 +77,7 @@ namespace oplan
         {
             if (korisnikBindingSource.Current as korisnik != null)
             {
-                frmKorisnik formaKorisnik = new frmKorisnik(korisnikBindingSource.Current as korisnik);
+                frmDodajKorisnika formaKorisnik = new frmDodajKorisnika(korisnikBindingSource.Current as korisnik);
                 formaKorisnik.ShowDialog();
                 PrikaziKorisnike(korisnikBindingSource);
             }

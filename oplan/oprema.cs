@@ -15,43 +15,37 @@ namespace oplan
 using System;
     using System.Collections.Generic;
     
-public partial class postrojba
+public partial class oprema
 {
 
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-    public postrojba()
+    public oprema()
     {
 
-        this.tocka = new HashSet<tocka>();
-
-        this.oprema = new HashSet<oprema>();
+        this.postrojba = new HashSet<postrojba>();
 
     }
 
 
-    public int id_postrojba { get; set; }
+    public int id_oprema { get; set; }
 
-    public double izdrzljivost { get; set; }
+    public string model { get; set; }
 
-    public double brzina { get; set; }
+    public string opis { get; set; }
 
-    public int id_vrsta { get; set; }
+    public int id_tip_oprema { get; set; }
 
-    public int id_tip { get; set; }
+    public int id_zemlja { get; set; }
 
 
 
-    public virtual vrsta vrsta { get; set; }
+    public virtual tip_opreme tip_opreme { get; set; }
 
-    public virtual tip_postrojbe tip_postrojbe { get; set; }
-
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-
-    public virtual ICollection<tocka> tocka { get; set; }
+    public virtual zemlja zemlja { get; set; }
 
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
 
-    public virtual ICollection<oprema> oprema { get; set; }
+    public virtual ICollection<postrojba> postrojba { get; set; }
 
 }
 

@@ -7,7 +7,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Prototip_OPPlan;
 
 namespace oplan
 {
@@ -44,16 +43,10 @@ namespace oplan
 
         private void miIzbornikNoviPlan_Click(object sender, EventArgs e)
         {
-            /*frmPlan formaPlan = new frmPlan();
+            frmPlan formaPlan = new frmPlan();
             formaPlan.MdiParent = this;
             formaPlan.WindowState = FormWindowState.Maximized;
-            formaPlan.Show();*/
-
-            this.WindowState = FormWindowState.Maximized;
-            Form1 kek = new Form1();
-            kek.Text = "Novi Operacijski plan";
-            kek.WindowState = FormWindowState.Maximized;
-            kek.Show();
+            formaPlan.Show();
         }
 
         private void miIzbornikUcitajPlan_Click(object sender, EventArgs e)
@@ -71,10 +64,14 @@ namespace oplan
 
         }
 
-        private void spremiPlanToolStripMenuItem_Click(object sender, EventArgs e)
+        private void opremaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmNaziv formaNaziv = new frmNaziv();
-            formaNaziv.ShowDialog();
+
+        }
+
+        private void arsenalToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

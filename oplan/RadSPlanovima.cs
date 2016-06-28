@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Prototip_OPPlan;
 
 namespace oplan
 {
@@ -31,7 +30,7 @@ namespace oplan
             }
         }
 
-        static public void PromijeniNaziv(string stariNaziv, string NoviNaziv)
+        static public void PromjeniNaziv(string stariNaziv, string NoviNaziv)
         {
             using (var db = new EntitiesSettings())
             {
@@ -41,32 +40,6 @@ namespace oplan
 
                 plan.naziv = NoviNaziv;
                 db.SaveChanges();
-            }
-        }
-
-        static public void SpremiPlan(int prijavljeniKorisnik, string nazivPlana, List<podaci> markeri, List<rute> rute)
-        {
-            using(var db = new EntitiesSettings())
-            {
-                plan noviPlan = new plan();
-                noviPlan.naziv = nazivPlana;
-                noviPlan.datum = DateTime.Now;
-                db.plan.Add(noviPlan);
-                db.SaveChanges();
-
-                int id = (from p in db.plan
-                            orderby p.id_plan descending
-                            select p.id_plan).FirstOrDefault();
-
-                promjena novaPromjena = new promjena();
-                novaPromjena.id_korisnik = prijavljeniKorisnik;
-                novaPromjena.id_plan = id;
-                novaPromjena.datum = DateTime.Now;
-                novaPromjena.radnja = Promjene.spremioPlan;
-                db.promjena.Add(novaPromjena);
-                db.SaveChanges();
-
-
             }
         }
     }

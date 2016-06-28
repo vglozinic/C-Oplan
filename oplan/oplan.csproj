@@ -46,10 +46,6 @@
     </Reference>
     <Reference Include="Microsoft.ReportViewer.Common, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
     <Reference Include="Microsoft.ReportViewer.WinForms, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
-    <Reference Include="Prototip_OPPlan, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\po\Prototip_OPPlan\bin\Debug\Prototip_OPPlan.exe</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
@@ -93,6 +89,24 @@
     <Compile Include="frmDnevnik.Designer.cs">
       <DependentUpon>frmDnevnik.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmDodajKorisnika.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDodajKorisnika.Designer.cs">
+      <DependentUpon>frmDodajKorisnika.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDodajOpremu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDodajOpremu.Designer.cs">
+      <DependentUpon>frmDodajOpremu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDodajPostrojbu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDodajPostrojbu.Designer.cs">
+      <DependentUpon>frmDodajPostrojbu.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmIzbornik.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -105,23 +119,17 @@
     <Compile Include="frmKorisnici.Designer.cs">
       <DependentUpon>frmKorisnici.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmKorisnik.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmKorisnik.Designer.cs">
-      <DependentUpon>frmKorisnik.cs</DependentUpon>
-    </Compile>
     <Compile Include="frmNaziv.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmNaziv.Designer.cs">
       <DependentUpon>frmNaziv.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmPostrojba.cs">
+    <Compile Include="frmOprema.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmPostrojba.Designer.cs">
-      <DependentUpon>frmPostrojba.cs</DependentUpon>
+    <Compile Include="frmOprema.Designer.cs">
+      <DependentUpon>frmOprema.cs</DependentUpon>
     </Compile>
     <Compile Include="frmPostrojbe.cs">
       <SubType>Form</SubType>
@@ -151,6 +159,9 @@
     <Compile Include="korisnik.cs">
       <DependentUpon>BazaPodatakaOPLAN.tt</DependentUpon>
     </Compile>
+    <Compile Include="oprema.cs">
+      <DependentUpon>BazaPodatakaOPLAN.tt</DependentUpon>
+    </Compile>
     <Compile Include="plan.cs">
       <DependentUpon>BazaPodatakaOPLAN.tt</DependentUpon>
     </Compile>
@@ -164,7 +175,6 @@
     <Compile Include="promjena.cs">
       <DependentUpon>BazaPodatakaOPLAN.tt</DependentUpon>
     </Compile>
-    <Compile Include="Promjene.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ProvjeraKorisnika.cs" />
     <Compile Include="ProvjeraUnosa.cs" />
@@ -174,13 +184,19 @@
     <Compile Include="sysdiagrams.cs">
       <DependentUpon>BazaPodatakaOPLAN.tt</DependentUpon>
     </Compile>
-    <Compile Include="tip.cs">
+    <Compile Include="tip_opreme.cs">
+      <DependentUpon>BazaPodatakaOPLAN.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tip_postrojbe.cs">
       <DependentUpon>BazaPodatakaOPLAN.tt</DependentUpon>
     </Compile>
     <Compile Include="tocka.cs">
       <DependentUpon>BazaPodatakaOPLAN.tt</DependentUpon>
     </Compile>
     <Compile Include="vrsta.cs">
+      <DependentUpon>BazaPodatakaOPLAN.tt</DependentUpon>
+    </Compile>
+    <Compile Include="zemlja.cs">
       <DependentUpon>BazaPodatakaOPLAN.tt</DependentUpon>
     </Compile>
     <EmbeddedResource Include="frmDnevnik.resx">
@@ -192,14 +208,8 @@
     <EmbeddedResource Include="frmKorisnici.resx">
       <DependentUpon>frmKorisnici.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmKorisnik.resx">
-      <DependentUpon>frmKorisnik.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="frmNaziv.resx">
       <DependentUpon>frmNaziv.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmPostrojba.resx">
-      <DependentUpon>frmPostrojba.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmPostrojbe.resx">
       <DependentUpon>frmPostrojbe.cs</DependentUpon>

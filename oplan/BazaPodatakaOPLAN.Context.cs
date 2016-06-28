@@ -46,9 +46,15 @@ public partial class EntitiesSettings : DbContext
 
     public virtual DbSet<promjena> promjena { get; set; }
 
-    public virtual DbSet<tip> tip { get; set; }
+    public virtual DbSet<tip_postrojbe> tip_postrojbe { get; set; }
 
     public virtual DbSet<tocka> tocka { get; set; }
+
+    public virtual DbSet<oprema> oprema { get; set; }
+
+    public virtual DbSet<tip_opreme> tip_opreme { get; set; }
+
+    public virtual DbSet<zemlja> zemlja { get; set; }
 
 }
 
