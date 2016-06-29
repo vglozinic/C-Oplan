@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmArsenal));
             this.lblFilter = new System.Windows.Forms.Label();
             this.gbxFilter = new System.Windows.Forms.GroupBox();
@@ -47,17 +48,17 @@
             // 
             this.lblFilter.AutoSize = true;
             this.lblFilter.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.lblFilter.Location = new System.Drawing.Point(12, 11);
+            this.lblFilter.Location = new System.Drawing.Point(12, 10);
             this.lblFilter.Name = "lblFilter";
-            this.lblFilter.Size = new System.Drawing.Size(216, 17);
+            this.lblFilter.Size = new System.Drawing.Size(106, 17);
             this.lblFilter.TabIndex = 0;
-            this.lblFilter.Text = "Odaberite po čemu želite filtrirati:";
+            this.lblFilter.Text = "Odaberite filter:";
             // 
             // gbxFilter
             // 
             this.gbxFilter.Controls.Add(this.rdbOprema);
             this.gbxFilter.Controls.Add(this.rdbPostrojba);
-            this.gbxFilter.Location = new System.Drawing.Point(230, -1);
+            this.gbxFilter.Location = new System.Drawing.Point(124, 0);
             this.gbxFilter.Name = "gbxFilter";
             this.gbxFilter.Size = new System.Drawing.Size(152, 33);
             this.gbxFilter.TabIndex = 1;
@@ -66,7 +67,7 @@
             // rdbOprema
             // 
             this.rdbOprema.AutoSize = true;
-            this.rdbOprema.Location = new System.Drawing.Point(84, 11);
+            this.rdbOprema.Location = new System.Drawing.Point(84, 10);
             this.rdbOprema.Name = "rdbOprema";
             this.rdbOprema.Size = new System.Drawing.Size(62, 17);
             this.rdbOprema.TabIndex = 2;
@@ -77,7 +78,7 @@
             // rdbPostrojba
             // 
             this.rdbPostrojba.AutoSize = true;
-            this.rdbPostrojba.Location = new System.Drawing.Point(10, 11);
+            this.rdbPostrojba.Location = new System.Drawing.Point(10, 10);
             this.rdbPostrojba.Name = "rdbPostrojba";
             this.rdbPostrojba.Size = new System.Drawing.Size(69, 17);
             this.rdbPostrojba.TabIndex = 1;
@@ -88,10 +89,19 @@
             // 
             // dgvArsenal
             // 
+            this.dgvArsenal.BackgroundColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvArsenal.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvArsenal.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvArsenal.Location = new System.Drawing.Point(15, 42);
+            this.dgvArsenal.Location = new System.Drawing.Point(15, 40);
             this.dgvArsenal.Name = "dgvArsenal";
-            this.dgvArsenal.Size = new System.Drawing.Size(594, 342);
+            this.dgvArsenal.Size = new System.Drawing.Size(594, 352);
             this.dgvArsenal.TabIndex = 3;
             // 
             // btnIzbrisiDodjelu
@@ -134,17 +144,19 @@
             this.btnOpis.Name = "btnOpis";
             this.btnOpis.Size = new System.Drawing.Size(117, 32);
             this.btnOpis.TabIndex = 7;
-            this.btnOpis.Text = "Detaljnji opis";
+            this.btnOpis.Text = "Opis opreme";
             this.btnOpis.UseVisualStyleBackColor = true;
             this.btnOpis.Click += new System.EventHandler(this.btnOpis_Click);
             // 
             // cmbFilter
             // 
+            this.cmbFilter.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.cmbFilter.FormattingEnabled = true;
-            this.cmbFilter.Location = new System.Drawing.Point(388, 9);
+            this.cmbFilter.Location = new System.Drawing.Point(288, 8);
             this.cmbFilter.Name = "cmbFilter";
-            this.cmbFilter.Size = new System.Drawing.Size(221, 21);
+            this.cmbFilter.Size = new System.Drawing.Size(321, 24);
             this.cmbFilter.TabIndex = 8;
+            this.cmbFilter.SelectedIndexChanged += new System.EventHandler(this.cmbFilter_SelectedValueChanged);
             // 
             // frmArsenal
             // 

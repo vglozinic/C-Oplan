@@ -6,15 +6,15 @@ using System.Threading.Tasks;
 
 namespace oplan
 {
-    public class Stavka
+    class Stavka
     {
         public int id_postrojbe { get; set; }
-        public string naziv_postrojbe { get; set; }
+        public string tekst { get; set; }
 
         public Stavka(int id, string naziv)
         {
             this.id_postrojbe = id;
-            this.naziv_postrojbe = naziv;
+            this.tekst = naziv;
         }
     }
 }

@@ -12,14 +12,30 @@ namespace oplan
 {
     public partial class frmOpis : Form
     {
+        private string model;
+        private string opis;
+
         public frmOpis()
         {
             InitializeComponent();
         }
 
+        public frmOpis(string proslijedeniModel, string proslijedeniOpis)
+        {
+            InitializeComponent();
+            model = proslijedeniModel;
+            opis = proslijedeniOpis;
+        }
+
         private void frmOpis_Load(object sender, EventArgs e)
         {
-            this.Text = "blabla";
+            this.Text = "Detaljniji opis za " + model;
+            //rtbOpis.Text = opis;
+        }
+
+        private void btnZatvori_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

@@ -31,12 +31,12 @@
             this.components = new System.ComponentModel.Container();
             this.lblPostrojba = new System.Windows.Forms.Label();
             this.lblOprema = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.cmbOprema = new System.Windows.Forms.ComboBox();
             this.btnOdustani = new System.Windows.Forms.Button();
             this.btnSpremi = new System.Windows.Forms.Button();
             this.lblTooltip = new System.Windows.Forms.Label();
             this.tltOprema = new System.Windows.Forms.ToolTip(this.components);
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cmbPostrojba = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // lblPostrojba
@@ -59,13 +59,13 @@
             this.lblOprema.TabIndex = 2;
             this.lblOprema.Text = "Oprema:";
             // 
-            // comboBox2
+            // cmbOprema
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(91, 40);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(281, 21);
-            this.comboBox2.TabIndex = 3;
+            this.cmbOprema.FormattingEnabled = true;
+            this.cmbOprema.Location = new System.Drawing.Point(91, 40);
+            this.cmbOprema.Name = "cmbOprema";
+            this.cmbOprema.Size = new System.Drawing.Size(281, 21);
+            this.cmbOprema.TabIndex = 3;
             // 
             // btnOdustani
             // 
@@ -76,6 +76,7 @@
             this.btnOdustani.TabIndex = 5;
             this.btnOdustani.Text = "Odustani";
             this.btnOdustani.UseVisualStyleBackColor = true;
+            this.btnOdustani.Click += new System.EventHandler(this.btnOdustani_Click);
             // 
             // btnSpremi
             // 
@@ -86,6 +87,7 @@
             this.btnSpremi.TabIndex = 6;
             this.btnSpremi.Text = "Spremi";
             this.btnSpremi.UseVisualStyleBackColor = true;
+            this.btnSpremi.Click += new System.EventHandler(this.btnSpremi_Click);
             // 
             // lblTooltip
             // 
@@ -97,29 +99,30 @@
             this.lblTooltip.TabIndex = 4;
             this.lblTooltip.Text = "?";
             // 
-            // comboBox1
+            // cmbPostrojba
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(91, 10);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(281, 21);
-            this.comboBox1.TabIndex = 7;
+            this.cmbPostrojba.FormattingEnabled = true;
+            this.cmbPostrojba.Location = new System.Drawing.Point(91, 10);
+            this.cmbPostrojba.Name = "cmbPostrojba";
+            this.cmbPostrojba.Size = new System.Drawing.Size(281, 21);
+            this.cmbPostrojba.TabIndex = 7;
             // 
             // frmDodajArsenal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(384, 112);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.cmbPostrojba);
             this.Controls.Add(this.btnSpremi);
             this.Controls.Add(this.btnOdustani);
             this.Controls.Add(this.lblTooltip);
-            this.Controls.Add(this.comboBox2);
+            this.Controls.Add(this.cmbOprema);
             this.Controls.Add(this.lblOprema);
             this.Controls.Add(this.lblPostrojba);
             this.Name = "frmDodajArsenal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmDodajArsenal";
+            this.Load += new System.EventHandler(this.frmDodajArsenal_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -129,11 +132,11 @@
 
         private System.Windows.Forms.Label lblPostrojba;
         private System.Windows.Forms.Label lblOprema;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox cmbOprema;
         private System.Windows.Forms.Button btnOdustani;
         private System.Windows.Forms.Button btnSpremi;
         private System.Windows.Forms.Label lblTooltip;
         private System.Windows.Forms.ToolTip tltOprema;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cmbPostrojba;
     }
 }

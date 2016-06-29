@@ -19,77 +19,63 @@ namespace oplan
             InitializeComponent();
         }
 
-        private void PopuniPostrojbama()
-        {
-            using (var db = new EntitiesSettings())
-            {
-                var prikazaniTekst = (from p in db.postrojba
-                                      join v in db.vrsta on p.id_vrsta equals v.id_vrsta
-                                      join t in db.tip_postrojbe on p.id_tip equals t.id_tip
-                                      select new
-                                      {
-                                          id = p.id_postrojba,
-                                          tekst = v.naziv + " - " + t.naziv
-                                      }).ToList();
-
-                cmbFilter.DataSource = prikazaniTekst;
-                cmbFilter.ValueMember = "id";
-                cmbFilter.DisplayMember = "tekst";
-            }
-        }
-
-        private void PopuniOpremom()
-        {
-            using (var db = new EntitiesSettings())
-            {
-                cmbFilter.DataSource = db.oprema.ToList();
-                cmbFilter.DisplayMember = "model";
-                cmbFilter.ValueMember = "id_oprema";
-            }
-        }
-
         private void frmArsenal_Load(object sender, EventArgs e)
         {
+            RadSArsenalom.PopuniPostrojbama(cmbFilter);
             rdbPostrojba.Checked = true;
-            PopuniPostrojbama();
 
-            RadSArsenalom.PrikaziArsenal(filter, dgvArsenal, (int)cmbFilter.SelectedValue);
+            RadSArsenalom.PrikaziPoPostrojbama(dgvArsenal, (int)cmbFilter.SelectedValue);
         }
 
         private void btnDodajDodjelu_Click(object sender, EventArgs e)
         {
-            
+            frmDodajArsenal novaDodjela = new frmDodajArsenal();
+            novaDodjela.ShowDialog();
+            RadSArsenalom.PrikaziPodatke(filter, dgvArsenal, cmbFilter);
         }
 
         private void btnIzmijeniDodjelu_Click(object sender, EventArgs e)
         {
-
+            frmDodajArsenal novaDodjela = new frmDodajArsenal((int)dgvArsenal.CurrentRow.Cells[0].Value, (int)dgvArsenal.CurrentRow.Cells[1].Value);
+            novaDodjela.ShowDialog();
+            RadSArsenalom.PrikaziPodatke(filter, dgvArsenal, cmbFilter);
         }
 
         private void btnIzbrisiDodjelu_Click(object sender, EventArgs e)
         {
-
+            RadSArsenalom.ObrisiArsenal((int)dgvArsenal.CurrentRow.Cells[0].Value, (int)dgvArsenal.CurrentRow.Cells[1].Value);
+            RadSArsenalom.PrikaziPodatke(filter, dgvArsenal, cmbFilter);
         }
 
         private void cmbFilter_SelectedValueChanged(object sender, EventArgs e)
         {
-
+            RadSArsenalom.PrikaziPodatke(filter, dgvArsenal, cmbFilter);
         }
 
         private void btnOpis_Click(object sender, EventArgs e)
         {
-
+            if(filter == 1)
+            {
+                frmOpis detaljniOpis = new frmOpis(dgvArsenal.CurrentRow.Cells[2].Value.ToString(), dgvArsenal.CurrentRow.Cells[4].Value.ToString());
+                detaljniOpis.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("Odabir nije filtriran po postrojbama.", "Informacija", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
 
         private void rdbPostrojba_CheckedChanged(object sender, EventArgs e)
         {
             if(rdbPostrojba.Checked == true)
             {
-                PopuniPostrojbama();
+                filter = 1;
+                RadSArsenalom.PopuniPostrojbama(cmbFilter);
             }
             else
             {
-                PopuniOpremom();
+                filter = 2;
+                RadSArsenalom.PopuniOpremom(cmbFilter);
             }
         }
     }
