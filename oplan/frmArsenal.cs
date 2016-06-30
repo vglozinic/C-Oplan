@@ -43,7 +43,11 @@ namespace oplan
 
         private void btnIzbrisiDodjelu_Click(object sender, EventArgs e)
         {
-            RadSArsenalom.ObrisiArsenal((int)dgvArsenal.CurrentRow.Cells[0].Value, (int)dgvArsenal.CurrentRow.Cells[1].Value);
+            if (MessageBox.Show("Jeste li sigurni da želite obrisati dio ovog arsenala?", "Upozorenje!", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == System.Windows.Forms.DialogResult.Yes)
+            {
+                RadSArsenalom.ObrisiArsenal((int)dgvArsenal.CurrentRow.Cells[0].Value, (int)dgvArsenal.CurrentRow.Cells[1].Value);
+                MessageBox.Show("Uspješno ste uklonili zapis.", "Uspjeh", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
             RadSArsenalom.PrikaziPodatke(filter, dgvArsenal, cmbFilter);
         }
 

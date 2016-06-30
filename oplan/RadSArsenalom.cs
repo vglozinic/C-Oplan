@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity.Core;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -42,6 +43,53 @@ namespace oplan
                 nazivKontrole.DataSource = db.oprema.ToList();
                 nazivKontrole.DisplayMember = "model";
                 nazivKontrole.ValueMember = "id_oprema";
+            }
+        }
+
+        public static bool DodajArsenal(int id_postrojbe, int id_opreme)
+        {
+            using (var db = new EntitiesSettings())
+            {
+                oprema p = new oprema
+                {
+                    id_oprema = id_opreme
+                };
+
+                db.oprema.Add(p);
+                db.oprema.Attach(p);
+
+                postrojba s = new postrojba
+                {
+                    id_postrojba = id_postrojbe
+                };
+
+                db.postrojba.Add(s);
+                db.postrojba.Attach(s);
+
+                p.postrojba.Add(s);
+                try
+                {
+                    db.SaveChanges();
+                }
+                catch (System.Data.Entity.Infrastructure.DbUpdateException iznimka)
+                {
+                    MessageBox.Show("Takva dodjela već postoji u bazi podataka!", "Pogreška", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return false;
+                }
+            }
+            return true;
+        }
+
+        public static void IzmjeniArsenal(int SIDP, int SIDO, int NIDP, int NIDO)
+        {
+            ObrisiArsenal(SIDP, SIDO);
+            if(DodajArsenal(NIDP, NIDO))
+            {
+                MessageBox.Show("Uspješno ste izmijenili arsenal.", "Uspjeh", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                DodajArsenal(SIDP, SIDO);
             }
         }
 
@@ -127,17 +175,13 @@ namespace oplan
 
         static public void ObrisiArsenal(int id_postrojbe, int id_opreme)
         {
-            if (MessageBox.Show("Jeste li sigurni da želite obrisati dio ovog arsenala?", "Upozorenje!", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == System.Windows.Forms.DialogResult.Yes)
+            using (var db = new EntitiesSettings())
             {
-                using (var db = new EntitiesSettings())
-                {
-                    var postrojba = db.postrojba.FirstOrDefault(p => p.id_postrojba == id_postrojbe);
-                    var oprema = db.oprema.FirstOrDefault(s => s.id_oprema == id_opreme);
+                var postrojba = db.postrojba.FirstOrDefault(p => p.id_postrojba == id_postrojbe);
+                var oprema = db.oprema.FirstOrDefault(s => s.id_oprema == id_opreme);
 
-                    postrojba.oprema.Remove(oprema);
-                    db.SaveChanges();
-                }
-                MessageBox.Show("Uspješno ste uklonili zapis.", "Uspjeh", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                postrojba.oprema.Remove(oprema);
+                db.SaveChanges();
             }
         }
     }

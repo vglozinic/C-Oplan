@@ -66,6 +66,7 @@
             this.cmbOprema.Name = "cmbOprema";
             this.cmbOprema.Size = new System.Drawing.Size(281, 21);
             this.cmbOprema.TabIndex = 3;
+            this.cmbOprema.SelectedValueChanged += new System.EventHandler(this.cmbOprema_SelectedValueChanged);
             // 
             // btnOdustani
             // 
@@ -120,6 +121,7 @@
             this.Controls.Add(this.lblOprema);
             this.Controls.Add(this.lblPostrojba);
             this.Name = "frmDodajArsenal";
+            this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmDodajArsenal";
             this.Load += new System.EventHandler(this.frmDodajArsenal_Load);

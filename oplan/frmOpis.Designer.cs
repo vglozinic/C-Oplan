@@ -34,7 +34,7 @@
             // btnZatvori
             // 
             this.btnZatvori.Font = new System.Drawing.Font("Calibri", 10F);
-            this.btnZatvori.Location = new System.Drawing.Point(194, 522);
+            this.btnZatvori.Location = new System.Drawing.Point(247, 718);
             this.btnZatvori.Name = "btnZatvori";
             this.btnZatvori.Size = new System.Drawing.Size(85, 32);
             this.btnZatvori.TabIndex = 1;
@@ -46,7 +46,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(464, 562);
+            this.ClientSize = new System.Drawing.Size(584, 762);
             this.Controls.Add(this.btnZatvori);
             this.Name = "frmOpis";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
