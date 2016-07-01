@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.btnZatvori = new System.Windows.Forms.Button();
+            this.ucCitac = new oplan.ucCitac();
             this.SuspendLayout();
             // 
             // btnZatvori
@@ -42,13 +43,22 @@
             this.btnZatvori.UseVisualStyleBackColor = true;
             this.btnZatvori.Click += new System.EventHandler(this.btnZatvori_Click);
             // 
+            // ucCitac
+            // 
+            this.ucCitac.Location = new System.Drawing.Point(12, 13);
+            this.ucCitac.Name = "ucCitac";
+            this.ucCitac.Size = new System.Drawing.Size(560, 700);
+            this.ucCitac.TabIndex = 2;
+            // 
             // frmOpis
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(584, 762);
+            this.Controls.Add(this.ucCitac);
             this.Controls.Add(this.btnZatvori);
             this.Name = "frmOpis";
+            this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmOpis";
             this.Load += new System.EventHandler(this.frmOpis_Load);
@@ -58,5 +68,6 @@
 
         #endregion
         private System.Windows.Forms.Button btnZatvori;
+        private ucCitac ucCitac;
     }
 }

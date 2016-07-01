@@ -30,7 +30,7 @@ namespace oplan
         private void frmOpis_Load(object sender, EventArgs e)
         {
             this.Text = "Detaljniji opis za " + model;
-            //rtbOpis.Text = opis;
+            this.ucCitac.Opis = opis;
         }
 
         private void btnZatvori_Click(object sender, EventArgs e)

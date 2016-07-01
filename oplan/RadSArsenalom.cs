@@ -131,7 +131,8 @@ namespace oplan
                                 IDO = s.id_oprema,
                                 Model = s.model,
                                 Tip = m.naziv,
-                                Zemlja = z.naziv
+                                Zemlja = z.naziv,
+                                Opis = s.opis
                             }).ToList();
 
 
@@ -139,6 +140,7 @@ namespace oplan
 
                 dgvArsenal.Columns[0].Visible = false;
                 dgvArsenal.Columns[1].Visible = false;
+                dgvArsenal.Columns[5].Visible = false;
 
                 dgvArsenal.Columns[2].Width = 234;
                 dgvArsenal.Columns[3].Width = 180;

@@ -60,7 +60,7 @@ namespace oplan
         {
             if(filter == 1)
             {
-                frmOpis detaljniOpis = new frmOpis(dgvArsenal.CurrentRow.Cells[2].Value.ToString(), dgvArsenal.CurrentRow.Cells[4].Value.ToString());
+                frmOpis detaljniOpis = new frmOpis(dgvArsenal.CurrentRow.Cells[2].Value.ToString(), dgvArsenal.CurrentRow.Cells[5].Value.ToString());
                 detaljniOpis.ShowDialog();
             }
             else

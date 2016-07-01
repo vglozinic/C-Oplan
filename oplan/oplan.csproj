@@ -213,6 +213,12 @@
     <Compile Include="tocka.cs">
       <DependentUpon>BazaPodatakaOPLAN.tt</DependentUpon>
     </Compile>
+    <Compile Include="ucCitac.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucCitac.Designer.cs">
+      <DependentUpon>ucCitac.cs</DependentUpon>
+    </Compile>
     <Compile Include="vrsta.cs">
       <DependentUpon>BazaPodatakaOPLAN.tt</DependentUpon>
     </Compile>
@@ -266,6 +272,9 @@
       <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="rptDnevnik.rdlc" />
+    <EmbeddedResource Include="ucCitac.resx">
+      <DependentUpon>ucCitac.cs</DependentUpon>
+    </EmbeddedResource>
     <EntityDeploy Include="BazaPodatakaOPLAN.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>BazaPodatakaOPLAN.Designer.cs</LastGenOutput>

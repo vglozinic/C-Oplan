@@ -156,7 +156,7 @@
             this.cmbFilter.Name = "cmbFilter";
             this.cmbFilter.Size = new System.Drawing.Size(321, 24);
             this.cmbFilter.TabIndex = 8;
-            this.cmbFilter.SelectedIndexChanged += new System.EventHandler(this.cmbFilter_SelectedValueChanged);
+            this.cmbFilter.SelectedValueChanged += new System.EventHandler(this.cmbFilter_SelectedValueChanged);
             // 
             // frmArsenal
             // 
