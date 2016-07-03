@@ -60,6 +60,7 @@
             this.ClientSize = new System.Drawing.Size(234, 87);
             this.Controls.Add(this.txtNaziv);
             this.Controls.Add(this.btnPotvrdi);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "frmNaziv";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

@@ -62,9 +62,9 @@
             // cmbOprema
             // 
             this.cmbOprema.FormattingEnabled = true;
-            this.cmbOprema.Location = new System.Drawing.Point(91, 40);
+            this.cmbOprema.Location = new System.Drawing.Point(88, 40);
             this.cmbOprema.Name = "cmbOprema";
-            this.cmbOprema.Size = new System.Drawing.Size(281, 21);
+            this.cmbOprema.Size = new System.Drawing.Size(285, 21);
             this.cmbOprema.TabIndex = 3;
             this.cmbOprema.SelectedValueChanged += new System.EventHandler(this.cmbOprema_SelectedValueChanged);
             // 
@@ -94,7 +94,7 @@
             // 
             this.lblTooltip.AutoSize = true;
             this.lblTooltip.Font = new System.Drawing.Font("MS Reference Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
-            this.lblTooltip.Location = new System.Drawing.Point(69, 38);
+            this.lblTooltip.Location = new System.Drawing.Point(72, 37);
             this.lblTooltip.Name = "lblTooltip";
             this.lblTooltip.Size = new System.Drawing.Size(16, 16);
             this.lblTooltip.TabIndex = 4;
@@ -103,9 +103,9 @@
             // cmbPostrojba
             // 
             this.cmbPostrojba.FormattingEnabled = true;
-            this.cmbPostrojba.Location = new System.Drawing.Point(91, 10);
+            this.cmbPostrojba.Location = new System.Drawing.Point(87, 10);
             this.cmbPostrojba.Name = "cmbPostrojba";
-            this.cmbPostrojba.Size = new System.Drawing.Size(281, 21);
+            this.cmbPostrojba.Size = new System.Drawing.Size(285, 21);
             this.cmbPostrojba.TabIndex = 7;
             // 
             // frmDodajArsenal
@@ -120,6 +120,7 @@
             this.Controls.Add(this.cmbOprema);
             this.Controls.Add(this.lblOprema);
             this.Controls.Add(this.lblPostrojba);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "frmDodajArsenal";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

@@ -119,7 +119,7 @@
             // btnOdustani
             // 
             this.btnOdustani.Font = new System.Drawing.Font("Calibri", 10F);
-            this.btnOdustani.Location = new System.Drawing.Point(291, 257);
+            this.btnOdustani.Location = new System.Drawing.Point(291, 249);
             this.btnOdustani.Name = "btnOdustani";
             this.btnOdustani.Size = new System.Drawing.Size(85, 32);
             this.btnOdustani.TabIndex = 8;
@@ -129,7 +129,7 @@
             // btnSpremi
             // 
             this.btnSpremi.Font = new System.Drawing.Font("Calibri", 10F);
-            this.btnSpremi.Location = new System.Drawing.Point(200, 257);
+            this.btnSpremi.Location = new System.Drawing.Point(200, 249);
             this.btnSpremi.Name = "btnSpremi";
             this.btnSpremi.Size = new System.Drawing.Size(85, 32);
             this.btnSpremi.TabIndex = 9;
@@ -140,7 +140,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(394, 302);
+            this.ClientSize = new System.Drawing.Size(394, 292);
             this.Controls.Add(this.btnSpremi);
             this.Controls.Add(this.btnOdustani);
             this.Controls.Add(this.cmbZemlja);
@@ -151,6 +151,8 @@
             this.Controls.Add(this.lblZemlja);
             this.Controls.Add(this.lblTip);
             this.Controls.Add(this.lblModel);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "frmDodajOpremu";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

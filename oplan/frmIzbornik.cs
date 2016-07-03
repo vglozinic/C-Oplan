@@ -32,7 +32,7 @@ namespace oplan
 
         private void miAdministracijaKorisnici_Click(object sender, EventArgs e)
         {
-            frmKorisnici korisnici = new frmKorisnici();
+            frmKorisnici korisnici = new frmKorisnici(prijavljeniKorisnik);
             korisnici.ShowDialog();
         }
 
@@ -61,17 +61,30 @@ namespace oplan
 
         private void miPomocOPLAN_Click(object sender, EventArgs e)
         {
-
+            frmAbout oNama = new frmAbout();
+            oNama.ShowDialog();
         }
 
-        private void opremaToolStripMenuItem_Click(object sender, EventArgs e)
+        private void miStatistikaZemlje_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void arsenalToolStripMenuItem_Click(object sender, EventArgs e)
+        private void miStatistikaTip_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void miIzbornikArsenal_Click(object sender, EventArgs e)
+        {
+            frmArsenal pregledArsenala = new frmArsenal();
+            pregledArsenala.ShowDialog();
+        }
+
+        private void miIzboenikOprema_Click(object sender, EventArgs e)
+        {
+            frmOprema pregledOpreme = new frmOprema();
+            pregledOpreme.ShowDialog();
         }
     }
 }

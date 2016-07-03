@@ -73,11 +73,11 @@ namespace oplan
         /// <summary>
         /// Prikazuje formu za izmjenu korisnika te prikazuje ažurirane korisnike po završetku.
         /// </summary>
-        static public void IzmijeniKorisnika(BindingSource korisnikBindingSource)
+        static public void IzmijeniKorisnika(BindingSource korisnikBindingSource, int id)
         {
             if (korisnikBindingSource.Current as korisnik != null)
             {
-                frmDodajKorisnika formaKorisnik = new frmDodajKorisnika(korisnikBindingSource.Current as korisnik);
+                frmDodajKorisnika formaKorisnik = new frmDodajKorisnika(korisnikBindingSource.Current as korisnik, id);
                 formaKorisnik.ShowDialog();
                 PrikaziKorisnike(korisnikBindingSource);
             }

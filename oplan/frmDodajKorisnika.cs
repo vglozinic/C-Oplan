@@ -13,6 +13,7 @@ namespace oplan
     public partial class frmDodajKorisnika : Form
     {
         private korisnik redakZaIzmjenu;
+        private int prijavljeniKorisnik;
 
         public frmDodajKorisnika()
         {
@@ -20,10 +21,11 @@ namespace oplan
             rdbNe.Checked = true;
         }
 
-        public frmDodajKorisnika(korisnik korisnik)
+        public frmDodajKorisnika(korisnik korisnik, int id)
         {
             InitializeComponent();
             redakZaIzmjenu = korisnik;
+            prijavljeniKorisnik = id;
             this.Text = "Izmjena korisnika";
         }
 
@@ -115,6 +117,11 @@ namespace oplan
                 if(redakZaIzmjenu.administrator == "Da")
                 {
                     rdbDa.Checked = true;
+                    if (redakZaIzmjenu.id_korisnik == prijavljeniKorisnik)
+                    {
+                        rdbDa.Enabled = false;
+                        rdbNe.Enabled = false;
+                    }
                 }
                 else
                 {

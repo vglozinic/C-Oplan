@@ -83,6 +83,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>dsIzvjestaj.xsd</DependentUpon>
     </Compile>
+    <Compile Include="frmAbout.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAbout.Designer.cs">
+      <DependentUpon>frmAbout.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmArsenal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -225,6 +231,9 @@
     <Compile Include="zemlja.cs">
       <DependentUpon>BazaPodatakaOPLAN.tt</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="frmAbout.resx">
+      <DependentUpon>frmAbout.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmArsenal.resx">
       <DependentUpon>frmArsenal.cs</DependentUpon>
     </EmbeddedResource>
@@ -233,6 +242,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmDodajArsenal.resx">
       <DependentUpon>frmDodajArsenal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDodajKorisnika.resx">
+      <DependentUpon>frmDodajKorisnika.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDodajOpremu.resx">
+      <DependentUpon>frmDodajOpremu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmDodajPostrojbu.resx">
       <DependentUpon>frmDodajPostrojbu.cs</DependentUpon>
@@ -248,6 +263,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmOpis.resx">
       <DependentUpon>frmOpis.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmOprema.resx">
+      <DependentUpon>frmOprema.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmPostrojbe.resx">
       <DependentUpon>frmPostrojbe.cs</DependentUpon>
