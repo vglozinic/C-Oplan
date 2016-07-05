@@ -10,6 +10,10 @@ namespace oplan
 {
     class RadSArsenalom
     {
+        /// <summary>
+        /// Stvara listu postrojbi i puni označeni commbo box sa njihovim nazivom i ID postrojbe.
+        /// </summary>
+        /// <param name="nazivKontrole">Naziv comboboxa u kojem će biti lista postrojbi</param>
         public static void PopuniPostrojbama(System.Windows.Forms.ComboBox nazivKontrole)
         {
             using (var db = new EntitiesSettings())
@@ -36,6 +40,10 @@ namespace oplan
             }
         }
 
+        /// <summary>
+        /// Puni combobox sa listom opreme iz baze podataka.
+        /// </summary>
+        /// <param name="nazivKontrole">Naziv comboboxa za prikaz liste</param>
         public static void PopuniOpremom(System.Windows.Forms.ComboBox nazivKontrole)
         {
             using (var db = new EntitiesSettings())
@@ -46,6 +54,12 @@ namespace oplan
             }
         }
 
+        /// <summary>
+        /// Dodjeljuje odabranu opremu odabranoj postrojbi te baca iznimku ako takva dodjela već postoji.
+        /// </summary>
+        /// <param name="id_postrojbe">ID postrojbe kojoj se želi dodijeliti oprema</param>
+        /// <param name="id_opreme">ID oprema koja se želi dodijeliti postrojbi</param>
+        /// <returns>True ako je dodjela uspjela, false ako se nije.</returns>
         public static bool DodajArsenal(int id_postrojbe, int id_opreme)
         {
             using (var db = new EntitiesSettings())
@@ -71,7 +85,7 @@ namespace oplan
                 {
                     db.SaveChanges();
                 }
-                catch (System.Data.Entity.Infrastructure.DbUpdateException iznimka)
+                catch (System.Data.Entity.Infrastructure.DbUpdateException)
                 {
                     MessageBox.Show("Takva dodjela već postoji u bazi podataka!", "Pogreška", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return false;
@@ -80,6 +94,13 @@ namespace oplan
             return true;
         }
 
+        /// <summary>
+        /// Mijenja arsenal ukoliko takav  zapis već ne postoji takav zapis u bazi podataka.
+        /// </summary>
+        /// <param name="SIDP">ID postrojbe koja se mijenja</param>
+        /// <param name="SIDO">ID opreme koja se mijenja</param>
+        /// <param name="NIDP">ID postrojbe koji se zapisao umjesto starog ID</param>
+        /// <param name="NIDO">ID opreme koji se zapisao umjesto starog ID</param>
         public static void IzmjeniArsenal(int SIDP, int SIDO, int NIDP, int NIDO)
         {
             ObrisiArsenal(SIDP, SIDO);
@@ -93,6 +114,12 @@ namespace oplan
             }
         }
 
+        /// <summary>
+        /// Provjerava koji je filter te koja stavka izbornika odabrana te prema tome poziva funkcije za prikaz podataka.
+        /// </summary>
+        /// <param name="filter">ID filtera (1 - postrojbe, 2 - oprema)</param>
+        /// <param name="dgvArsenal">Naziv DataGridViewa u kojem se prikazuju podaci</param>
+        /// <param name="nazivKontrole">Naziv comboboxa u kojem je odabrana postrojba ili oprema</param>
         public static void PrikaziPodatke(int filter, DataGridView dgvArsenal, System.Windows.Forms.ComboBox nazivKontrole)
         {
             if (filter == 1)
@@ -113,6 +140,11 @@ namespace oplan
             }
         }
 
+        /// <summary>
+        /// Preko LINQ upita uzima podatke po postrojbi i prikazuje opremu za tu postrojbu.
+        /// </summary>
+        /// <param name="dgvArsenal">Naziv DataGridViewa u kojem se prikazuju podaci</param>
+        /// <param name="id_postrojba">ID postrojbe po kojoj se filtriraju podaci</param>
         static public void PrikaziPoPostrojbama(DataGridView dgvArsenal, int id_postrojba)
         {
             using (var db = new EntitiesSettings())
@@ -148,6 +180,11 @@ namespace oplan
             }
         }
 
+        /// <summary>
+        /// Preko LINQ upita uzima podatke po opremi i prikazuje postrojbe kojima je dodjeljena ta oprema.
+        /// </summary>
+        /// <param name="dgvArsenal">Naziv DataGridViewa u kojem se prikazuju podaci</param>
+        /// <param name="id_oprema">ID opreme po kojoj se filtriraju podaci</param>
         static public void PrikaziPoOpremi(DataGridView dgvArsenal, int id_oprema)
         {
             using (var db = new EntitiesSettings())
@@ -175,6 +212,11 @@ namespace oplan
             }
         }
 
+        /// <summary>
+        /// Pronalazi i briše dodjelu iz baze podataka.
+        /// </summary>
+        /// <param name="id_postrojbe">ID postrojbe kojoj se miče oprema</param>
+        /// <param name="id_opreme">ID opreme koja se ukida postrojbi</param>
         static public void ObrisiArsenal(int id_postrojbe, int id_opreme)
         {
             using (var db = new EntitiesSettings())

@@ -18,9 +18,13 @@ namespace oplan
         public frmDodajKorisnika()
         {
             InitializeComponent();
-            rdbNe.Checked = true;
         }
 
+        /// <summary>
+        /// Konstruktor koji se poziva kada se odabrani korisnik mijenja.
+        /// </summary>
+        /// <param name="korisnik">Korisnik koji se mijenja</param>
+        /// <param name="id">ID trenutno prijavljenog korisnika</param>
         public frmDodajKorisnika(korisnik korisnik, int id)
         {
             InitializeComponent();
@@ -109,7 +113,9 @@ namespace oplan
 
         private void frmKorisnik_Load(object sender, EventArgs e)
         {
-            if(redakZaIzmjenu != null)
+            rdbNe.Checked = true;
+
+            if (redakZaIzmjenu != null)
             {
                 txtID.Text = redakZaIzmjenu.id_korisnik.ToString();
                 txtKorime.Text = redakZaIzmjenu.korisnicko_ime;

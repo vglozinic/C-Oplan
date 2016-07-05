@@ -14,6 +14,10 @@ namespace oplan
     {
         private int prijavljeniKorisnik;
 
+        /// <summary>
+        /// Konstruktor kojem se proslijeđuje ID trenutnog korisnika.
+        /// </summary>
+        /// <param name="id">ID prijavljenog korisnika</param>
         public frmKorisnici(int id)
         {
             InitializeComponent();

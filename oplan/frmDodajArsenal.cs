@@ -20,6 +20,11 @@ namespace oplan
             InitializeComponent();
         }
 
+        /// <summary>
+        /// Konstruktor kojem se proslijeđuje ID postrojbe i ID opreme.
+        /// </summary>
+        /// <param name="postrojba">ID opreme koja se mijenja</param>
+        /// <param name="oprema">ID opreme koja se mijenja</param>
         public frmDodajArsenal(int postrojba, int oprema)
         {
             InitializeComponent();

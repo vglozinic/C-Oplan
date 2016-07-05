@@ -34,6 +34,8 @@
             this.btnIzbrisiPostrojbu = new System.Windows.Forms.Button();
             this.btnDodajPostrojbu = new System.Windows.Forms.Button();
             this.btnIzmijeniPostrojbu = new System.Windows.Forms.Button();
+            this.btnPopis = new System.Windows.Forms.Button();
+            this.pomoc = new System.Windows.Forms.HelpProvider();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPostrojbe)).BeginInit();
             this.SuspendLayout();
             // 
@@ -44,6 +46,7 @@
             this.dgvPostrojbe.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvPostrojbe.BackgroundColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
@@ -95,17 +98,37 @@
             this.btnIzmijeniPostrojbu.UseVisualStyleBackColor = true;
             this.btnIzmijeniPostrojbu.Click += new System.EventHandler(this.btnIzmijeniPostrojbu_Click);
             // 
+            // btnPopis
+            // 
+            this.btnPopis.Font = new System.Drawing.Font("Calibri", 10F);
+            this.btnPopis.Location = new System.Drawing.Point(13, 378);
+            this.btnPopis.Name = "btnPopis";
+            this.btnPopis.Size = new System.Drawing.Size(120, 32);
+            this.btnPopis.TabIndex = 5;
+            this.btnPopis.Text = "Popis opreme";
+            this.btnPopis.UseVisualStyleBackColor = true;
+            this.btnPopis.Click += new System.EventHandler(this.btnPopis_Click);
+            // 
+            // pomoc
+            // 
+            this.pomoc.HelpNamespace = "../../help/oplan.chm";
+            // 
             // frmPostrojbe
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(624, 422);
+            this.Controls.Add(this.btnPopis);
             this.Controls.Add(this.btnIzmijeniPostrojbu);
             this.Controls.Add(this.btnDodajPostrojbu);
             this.Controls.Add(this.btnIzbrisiPostrojbu);
             this.Controls.Add(this.dgvPostrojbe);
+            this.pomoc.SetHelpKeyword(this, "F1");
+            this.pomoc.SetHelpNavigator(this, System.Windows.Forms.HelpNavigator.TableOfContents);
+            this.pomoc.SetHelpString(this, "F1");
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmPostrojbe";
+            this.pomoc.SetShowHelp(this, true);
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Rad s postrojbama";
             this.Load += new System.EventHandler(this.frmPostrojbe_Load);
@@ -120,5 +143,7 @@
         private System.Windows.Forms.Button btnIzbrisiPostrojbu;
         private System.Windows.Forms.Button btnDodajPostrojbu;
         private System.Windows.Forms.Button btnIzmijeniPostrojbu;
+        private System.Windows.Forms.Button btnPopis;
+        private System.Windows.Forms.HelpProvider pomoc;
     }
 }

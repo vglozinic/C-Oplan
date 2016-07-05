@@ -20,6 +20,11 @@ namespace oplan
             InitializeComponent();
         }
 
+        /// <summary>
+        /// Konstruktor klase kojem se proslijeđuje model i opis opreme koji se prikazuje u čitaču teksta.
+        /// </summary>
+        /// <param name="proslijedeniModel">Model opreme u tekstualnom obliku</param>
+        /// <param name="proslijedeniOpis">Opis opreme u tekstualnom obliku</param>
         public frmOpis(string proslijedeniModel, string proslijedeniOpis)
         {
             InitializeComponent();

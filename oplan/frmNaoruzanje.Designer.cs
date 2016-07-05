@@ -1,6 +1,6 @@
 ﻿namespace oplan
 {
-    partial class frmDnevnik
+    partial class frmNaoruzanje
     {
         /// <summary>
         /// Required designer variable.
@@ -28,48 +28,48 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmDnevnik));
-            this.rtvDnevnik = new Microsoft.Reporting.WinForms.ReportViewer();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmNaoruzanje));
+            this.rpvNaoruzanje = new Microsoft.Reporting.WinForms.ReportViewer();
             this.pomoc = new System.Windows.Forms.HelpProvider();
             this.SuspendLayout();
             // 
-            // rtvDnevnik
+            // rpvNaoruzanje
             // 
-            this.rtvDnevnik.Location = new System.Drawing.Point(0, 0);
-            this.rtvDnevnik.Name = "rtvDnevnik";
-            this.rtvDnevnik.ShowBackButton = false;
-            this.rtvDnevnik.ShowPageNavigationControls = false;
-            this.rtvDnevnik.ShowRefreshButton = false;
-            this.rtvDnevnik.ShowStopButton = false;
-            this.rtvDnevnik.Size = new System.Drawing.Size(1008, 730);
-            this.rtvDnevnik.TabIndex = 0;
+            this.rpvNaoruzanje.Location = new System.Drawing.Point(0, 0);
+            this.rpvNaoruzanje.Name = "rpvNaoruzanje";
+            this.rpvNaoruzanje.ShowBackButton = false;
+            this.rpvNaoruzanje.ShowPageNavigationControls = false;
+            this.rpvNaoruzanje.ShowRefreshButton = false;
+            this.rpvNaoruzanje.ShowStopButton = false;
+            this.rpvNaoruzanje.Size = new System.Drawing.Size(1008, 730);
+            this.rpvNaoruzanje.TabIndex = 0;
             // 
             // pomoc
             // 
             this.pomoc.HelpNamespace = "../../help/oplan.chm";
             // 
-            // frmDnevnik
+            // frmNaoruzanje
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1008, 730);
-            this.Controls.Add(this.rtvDnevnik);
+            this.Controls.Add(this.rpvNaoruzanje);
             this.pomoc.SetHelpKeyword(this, "F1");
             this.pomoc.SetHelpNavigator(this, System.Windows.Forms.HelpNavigator.TableOfContents);
             this.pomoc.SetHelpString(this, "F1");
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "frmDnevnik";
+            this.Name = "frmNaoruzanje";
             this.pomoc.SetShowHelp(this, true);
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmDnevnik";
-            this.Load += new System.EventHandler(this.frmDnevnik_Load);
+            this.Text = "frmNaoruzanje";
+            this.Load += new System.EventHandler(this.frmNaoruzanje_Load);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private Microsoft.Reporting.WinForms.ReportViewer rtvDnevnik;
+        private Microsoft.Reporting.WinForms.ReportViewer rpvNaoruzanje;
         private System.Windows.Forms.HelpProvider pomoc;
     }
 }

@@ -12,7 +12,6 @@ namespace oplan
 {
     public partial class frmPrijava : Form
     {
-
         public frmPrijava()
         {
             InitializeComponent();

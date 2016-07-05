@@ -8,10 +8,11 @@ namespace oplan
 {
     class RadSPlanovima
     {
-        ///<summary>
-        ///Provjerava postoji li takav naziv plana u bazi podataka.
-        ///</summary>
-        ///<returns>True ako naziv postoji, false ako ne postoji.</returns>
+        /// <summary>
+        /// Provjerava postoji li takav naziv plana u bazi podataka.
+        /// </summary>
+        /// <param name="naziv">Naziv plana koji se želi provjeriti</param>
+        /// <returns>True ako naziv postoji, false ako ne postoji.</returns>
         static public bool ProvjeriPlan(string naziv)
         {
             using (var db = new EntitiesSettings())
@@ -30,6 +31,11 @@ namespace oplan
             }
         }
 
+        /// <summary>
+        /// Pronalazi plan i mijenja naziv za taj odabrani plan.
+        /// </summary>
+        /// <param name="stariNaziv">Naziv plana koji se mijenja</param>
+        /// <param name="NoviNaziv">Novi naziv postojećeg plana</param>
         static public void PromjeniNaziv(string stariNaziv, string NoviNaziv)
         {
             using (var db = new EntitiesSettings())
@@ -38,6 +44,7 @@ namespace oplan
                             where p.naziv == stariNaziv
                             select p).FirstOrDefault<plan>();
 
+                db.plan.Attach(plan);
                 plan.naziv = NoviNaziv;
                 db.SaveChanges();
             }

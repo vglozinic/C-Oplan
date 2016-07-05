@@ -30,6 +30,7 @@
         {
             this.btnZatvori = new System.Windows.Forms.Button();
             this.ucCitac = new oplan.ucCitac();
+            this.pomoc = new System.Windows.Forms.HelpProvider();
             this.SuspendLayout();
             // 
             // btnZatvori
@@ -50,6 +51,10 @@
             this.ucCitac.Size = new System.Drawing.Size(560, 700);
             this.ucCitac.TabIndex = 2;
             // 
+            // pomoc
+            // 
+            this.pomoc.HelpNamespace = "../../help/oplan.chm";
+            // 
             // frmOpis
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -57,7 +62,11 @@
             this.ClientSize = new System.Drawing.Size(584, 762);
             this.Controls.Add(this.ucCitac);
             this.Controls.Add(this.btnZatvori);
+            this.pomoc.SetHelpKeyword(this, "F1");
+            this.pomoc.SetHelpNavigator(this, System.Windows.Forms.HelpNavigator.TableOfContents);
+            this.pomoc.SetHelpString(this, "F1");
             this.Name = "frmOpis";
+            this.pomoc.SetShowHelp(this, true);
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmOpis";
@@ -69,5 +78,6 @@
         #endregion
         private System.Windows.Forms.Button btnZatvori;
         private ucCitac ucCitac;
+        private System.Windows.Forms.HelpProvider pomoc;
     }
 }

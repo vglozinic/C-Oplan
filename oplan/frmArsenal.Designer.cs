@@ -40,6 +40,7 @@
             this.btnDodajDodjelu = new System.Windows.Forms.Button();
             this.btnOpis = new System.Windows.Forms.Button();
             this.cmbFilter = new System.Windows.Forms.ComboBox();
+            this.pomoc = new System.Windows.Forms.HelpProvider();
             this.gbxFilter.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvArsenal)).BeginInit();
             this.SuspendLayout();
@@ -89,6 +90,8 @@
             // 
             // dgvArsenal
             // 
+            this.dgvArsenal.AllowUserToAddRows = false;
+            this.dgvArsenal.AllowUserToDeleteRows = false;
             this.dgvArsenal.BackgroundColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
@@ -101,6 +104,7 @@
             this.dgvArsenal.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvArsenal.Location = new System.Drawing.Point(15, 40);
             this.dgvArsenal.Name = "dgvArsenal";
+            this.dgvArsenal.ReadOnly = true;
             this.dgvArsenal.Size = new System.Drawing.Size(594, 352);
             this.dgvArsenal.TabIndex = 3;
             // 
@@ -158,6 +162,10 @@
             this.cmbFilter.TabIndex = 8;
             this.cmbFilter.SelectedValueChanged += new System.EventHandler(this.cmbFilter_SelectedValueChanged);
             // 
+            // pomoc
+            // 
+            this.pomoc.HelpNamespace = "../../help/oplan.chm";
+            // 
             // frmArsenal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -171,8 +179,12 @@
             this.Controls.Add(this.dgvArsenal);
             this.Controls.Add(this.gbxFilter);
             this.Controls.Add(this.lblFilter);
+            this.pomoc.SetHelpKeyword(this, "F1");
+            this.pomoc.SetHelpNavigator(this, System.Windows.Forms.HelpNavigator.TableOfContents);
+            this.pomoc.SetHelpString(this, "F1");
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmArsenal";
+            this.pomoc.SetShowHelp(this, true);
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Rad s arsenalom";
             this.Load += new System.EventHandler(this.frmArsenal_Load);
@@ -196,5 +208,6 @@
         private System.Windows.Forms.Button btnDodajDodjelu;
         private System.Windows.Forms.Button btnOpis;
         private System.Windows.Forms.ComboBox cmbFilter;
+        private System.Windows.Forms.HelpProvider pomoc;
     }
 }

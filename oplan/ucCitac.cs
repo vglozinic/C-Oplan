@@ -14,9 +14,9 @@ namespace oplan
     {
         private List<string> fontovi = new List<string>();
         private List<int> velicine = new List<int>();
-
         private int trenutnaVelicina = 12;
 
+        //Property koje sadrži tekst u bogatom uređivaču teksta.
         public string Opis
         {
             set
@@ -25,6 +25,9 @@ namespace oplan
             }
         }
 
+        /// <summary>
+        /// Konstruktor u kojem se kontroli u obliku lista dodaju fontovi i veličine.
+        /// </summary>
         public ucCitac()
         {
             InitializeComponent();
@@ -66,7 +69,7 @@ namespace oplan
                     rtbOpis.Font = new Font(cmbFont.SelectedItem.ToString(), (int)cmbVelicina.SelectedItem, FontStyle.Regular);
                     trenutnaVelicina = (int)cmbVelicina.SelectedItem;
                 }
-                catch(System.ArgumentException iznimka)
+                catch(System.ArgumentException)
                 {
                     MessageBox.Show("Font ne može biti prikazan.", "Neispravni font", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     cmbFont.SelectedItem = "Times New Roman" as string;

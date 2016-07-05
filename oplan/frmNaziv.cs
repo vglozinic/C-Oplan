@@ -19,6 +19,10 @@ namespace oplan
             InitializeComponent();
         }
 
+        /// <summary>
+        /// Konstruktor klase koji se poziva kod izmjene i proslijeđuje mu se naziv plana.
+        /// </summary>
+        /// <param name="naziv">Naziv plana koji se želi promijeniti</param>
         public frmNaziv(string naziv)
         {
             InitializeComponent();
@@ -43,7 +47,7 @@ namespace oplan
                 {
                     if (!RadSPlanovima.ProvjeriPlan(txtNaziv.Text))
                     {
-                        //spremi ili kaj god
+                        //spremi plan
                         MessageBox.Show("Uspješno ste spremili plan.", "Uspjeh", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         this.Close();
                     }

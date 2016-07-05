@@ -47,6 +47,7 @@
             this.miPomoc = new System.Windows.Forms.ToolStripMenuItem();
             this.miPomocPrikaz = new System.Windows.Forms.ToolStripMenuItem();
             this.miPomocOPLAN = new System.Windows.Forms.ToolStripMenuItem();
+            this.pomoc = new System.Windows.Forms.HelpProvider();
             this.msGlavni.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -207,16 +208,24 @@
             this.miPomocOPLAN.Text = "O OPLAN-u";
             this.miPomocOPLAN.Click += new System.EventHandler(this.miPomocOPLAN_Click);
             // 
+            // pomoc
+            // 
+            this.pomoc.HelpNamespace = "../../help/oplan.chm";
+            // 
             // frmIzbornik
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1008, 730);
             this.Controls.Add(this.msGlavni);
+            this.pomoc.SetHelpKeyword(this, "F1");
+            this.pomoc.SetHelpNavigator(this, System.Windows.Forms.HelpNavigator.TableOfContents);
+            this.pomoc.SetHelpString(this, "F1");
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.msGlavni;
             this.Name = "frmIzbornik";
+            this.pomoc.SetShowHelp(this, true);
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "OPLAN";
             this.TransparencyKey = System.Drawing.Color.Transparent;
@@ -247,5 +256,6 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripMenuItem miStatistikaZemlje;
         private System.Windows.Forms.ToolStripMenuItem miStatistikaTip;
+        private System.Windows.Forms.HelpProvider pomoc;
     }
 }

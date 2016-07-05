@@ -31,7 +31,7 @@ namespace oplan
         }
 
         /// <summary>
-        /// Postavlja podatke iz baze u padajući izbornik.
+        /// Postavlja podatke o planovima iz baze u padajući izbornik.
         /// </summary>
         public void UcitajPodatke()
         {
