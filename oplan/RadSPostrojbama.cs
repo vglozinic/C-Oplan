@@ -77,6 +77,7 @@ namespace oplan
                                     if (postrojba.oprema.Count == 0)
                                     {
                                         db.postrojba.Remove(postrojba);
+                                        db.SaveChanges();
                                         MessageBox.Show("Uspješno ste obrisali postrojbu.", "Informacija", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                     }
                                     else
